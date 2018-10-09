@@ -1,14 +1,16 @@
 # To edit the Powershell Profile
 # (Not that I'll remember this)
-Function Edit-Profile
-{
+Function Edit-Profile {
+
     vim $profile
+    
 }
 
 # To edit Vim settings
-Function Edit-Vimrc
-{
+Function Edit-Vimrc {
+
     vim $HOME\_vimrc
+
 }
 
 function subl { 
