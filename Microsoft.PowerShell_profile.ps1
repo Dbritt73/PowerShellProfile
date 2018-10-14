@@ -30,7 +30,6 @@ Function Python {
     
 }
 
-. "C:\Users\brittod\documents\windowspowershell\Get-ChildItem-Color.ps1"
 
 Set-Alias ls Get-ChildItem-Color -option AllScope
 #Set-Alias ls Get-ChildItem-Format-Wide -option AllScope
@@ -41,5 +40,9 @@ Set-alias vim $VIMpath
 Set-Alias 'reboot' Restart-Computer -Force
 
 Set-Alias 'Shutdown' Stop-Computer -Force
+
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+. "C:\Users\brittod\documents\windowspowershell\Get-ChildItem-Color.ps1"
 
 Get-MOTD
