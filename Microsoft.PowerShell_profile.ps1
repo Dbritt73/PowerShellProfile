@@ -28,7 +28,6 @@ Function Python {
     
 }
 
-. "C:\Users\brittod\documents\windowspowershell\Get-ChildItem-Color.ps1"
 
 #Check if SCCM management console is installed - if so import SCCM Module
 $SCCMPath = "${env:ProgramFiles(x86)}\Microsoft Configuration Manager\bin\ConfigurationManager.psd1"
@@ -47,5 +46,9 @@ Set-alias vim $VIMpath
 Set-Alias 'reboot' Restart-Computer -Force
 
 Set-Alias 'Shutdown' Stop-Computer -Force
+
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+. "C:\Users\brittod\documents\windowspowershell\Get-ChildItem-Color.ps1"
 
 Get-MOTD
