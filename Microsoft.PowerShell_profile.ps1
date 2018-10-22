@@ -1,14 +1,12 @@
-# To edit the Powershell Profile
-# (Not that I'll remember this)
 Function Edit-Profile {
-
+    # To edit the Powershell Profile
+    # (Not that I'll remember this)
     vim $profile
     
 }
 
-# To edit Vim settings
 Function Edit-Vimrc {
-
+    # To edit Vim settings
     vim $HOME\_vimrc
 
 }
@@ -31,6 +29,14 @@ Function Python {
 }
 
 . "C:\Users\brittod\documents\windowspowershell\Get-ChildItem-Color.ps1"
+
+#Check if SCCM management console is installed - if so import SCCM Module
+$SCCMPath = "${env:ProgramFiles(x86)}\Microsoft Configuration Manager\bin\ConfigurationManager.psd1"
+if (Test-Path $SCCMPath ) {
+
+    Import-Module $SCCMPath
+    
+}
 
 Set-Alias ls Get-ChildItem-Color -option AllScope
 #Set-Alias ls Get-ChildItem-Format-Wide -option AllScope
